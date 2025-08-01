@@ -1,0 +1,18 @@
+2025-08-01 18:13:14,958 INFO    MainThread:5704 [wandb_setup.py:_flush():67] Current SDK version is 0.19.8
+2025-08-01 18:13:14,958 INFO    MainThread:5704 [wandb_setup.py:_flush():67] Configure stats pid to 5704
+2025-08-01 18:13:14,958 INFO    MainThread:5704 [wandb_setup.py:_flush():67] Loading settings from C:\Users\emile\.config\wandb\settings
+2025-08-01 18:13:14,958 INFO    MainThread:5704 [wandb_setup.py:_flush():67] Loading settings from c:\UNIFI\LM Bio UniFi\II ANNO\SECONDO SEMESTRE\APPLI OF MACHINE LEARNING\AML_Labs\Exercise\wandb\settings
+2025-08-01 18:13:14,958 INFO    MainThread:5704 [wandb_setup.py:_flush():67] Loading settings from environment variables
+2025-08-01 18:13:14,959 INFO    MainThread:5704 [wandb_init.py:setup_run_log_directory():647] Logging user logs to c:\UNIFI\LM Bio UniFi\II ANNO\SECONDO SEMESTRE\APPLI OF MACHINE LEARNING\AML_Labs\Exercise\wandb\run-20250801_181314-c6ecl9pf\logs\debug.log
+2025-08-01 18:13:14,959 INFO    MainThread:5704 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to c:\UNIFI\LM Bio UniFi\II ANNO\SECONDO SEMESTRE\APPLI OF MACHINE LEARNING\AML_Labs\Exercise\wandb\run-20250801_181314-c6ecl9pf\logs\debug-internal.log
+2025-08-01 18:13:14,959 INFO    MainThread:5704 [wandb_init.py:monkeypatch_ipython():599] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x0000029D708FDD10>
+2025-08-01 18:13:14,959 INFO    MainThread:5704 [wandb_init.py:init():761] calling init triggers
+2025-08-01 18:13:14,959 INFO    MainThread:5704 [wandb_init.py:init():766] wandb.init called with sweep_config: {}
+config: {'_wandb': {}}
+2025-08-01 18:13:14,959 INFO    MainThread:5704 [wandb_init.py:init():784] starting backend
+2025-08-01 18:13:14,959 INFO    MainThread:5704 [wandb_init.py:init():788] sending inform_init request
+2025-08-01 18:13:14,988 INFO    MainThread:5704 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=spawn, using: spawn
+2025-08-01 18:13:14,993 INFO    MainThread:5704 [wandb_init.py:init():798] backend started and connected
+2025-08-01 18:13:15,003 INFO    MainThread:5704 [wandb_run.py:_label_probe_notebook():1204] probe notebook
+2025-08-01 18:13:15,005 INFO    MainThread:5704 [wandb_init.py:init():891] updated telemetry
+2025-08-01 18:13:15,059 INFO    MainThread:5704 [wandb_init.py:init():915] communicating run to backend with 90.0 second timeout

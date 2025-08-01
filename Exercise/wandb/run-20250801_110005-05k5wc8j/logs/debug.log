@@ -6,3 +6,12 @@ config: {'_wandb': {}}
 2025-08-01 11:00:05,174 INFO    MainThread:14064 [wandb_init.py:init():776] wandb.init() called while a run is active
 2025-08-01 11:00:05,329 INFO    MainThread:14064 [jupyter.py:save_ipynb():386] not saving jupyter notebook
 2025-08-01 11:00:05,329 INFO    MainThread:14064 [wandb_init.py:_pause_backend():564] pausing backend
+2025-08-01 11:00:07,679 INFO    MainThread:14064 [wandb_init.py:_resume_backend():569] resuming backend
+2025-08-01 11:00:07,688 INFO    MainThread:14064 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-08-01 11:00:07,688 INFO    MainThread:14064 [wandb_init.py:_pause_backend():564] pausing backend
+2025-08-01 11:00:17,570 INFO    MainThread:14064 [wandb_init.py:_resume_backend():569] resuming backend
+2025-08-01 11:23:04,871 INFO    MainThread:14064 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-08-01 11:23:04,871 INFO    MainThread:14064 [wandb_init.py:_pause_backend():564] pausing backend
+2025-08-01 11:23:04,896 INFO    MainThread:14064 [wandb_init.py:_resume_backend():569] resuming backend
+2025-08-01 11:23:06,946 INFO    MainThread:14064 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-08-01 11:23:06,946 INFO    MainThread:14064 [wandb_init.py:_pause_backend():564] pausing backend
