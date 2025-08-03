@@ -1,0 +1,45 @@
+Epoch 1/50
+  Train_Loss: 0.2695 | Train_Acc: 0.9201
+  Val_Loss: 0.1350 | Val_Acc: 0.9565
+
+Epoch 2/50
+  Train_Loss: 0.1098 | Train_Acc: 0.9657
+  Val_Loss: 0.1033 | Val_Acc: 0.9667
+
+Epoch 3/50
+  Train_Loss: 0.0777 | Train_Acc: 0.9755
+  Val_Loss: 0.0868 | Val_Acc: 0.9728
+wandb: WARNING Fatal error while uploading data. Some run data will not be synced, but it will still be written to disk. Use `wandb sync` at the end of the run to try uploading.
+
+Epoch 4/50
+  Train_Loss: 0.0637 | Train_Acc: 0.9798
+  Val_Loss: 0.0820 | Val_Acc: 0.9717
+
+Epoch 5/50
+  Train_Loss: 0.0479 | Train_Acc: 0.9846
+  Val_Loss: 0.0846 | Val_Acc: 0.9740
+
+Epoch 6/50
+  Train_Loss: 0.0412 | Train_Acc: 0.9867
+  Val_Loss: 0.0918 | Val_Acc: 0.9710
+
+Epoch 7/50
+  Train_Loss: 0.0338 | Train_Acc: 0.9883
+  Val_Loss: 0.0724 | Val_Acc: 0.9778
+
+Epoch 8/50
+  Train_Loss: 0.0285 | Train_Acc: 0.9902
+  Val_Loss: 0.0818 | Val_Acc: 0.9753
+
+Epoch 9/50
+  Train_Loss: 0.0287 | Train_Acc: 0.9906
+  Val_Loss: 0.0949 | Val_Acc: 0.9737
+
+  Warning: val_loss > best_val_loss + delta_overfit = 0.0824
+Epoch 10/50
+  Train_Loss: 0.0226 | Train_Acc: 0.9924
+  Val_Loss: 0.0909 | Val_Acc: 0.9757
+
+  Warning: val_loss > best_val_loss + delta_overfit = 0.0824
+Early stopping due to overfitting
+Epoch 10: val_loss has been higher than best_val_loss + delta (0.01) for 2 epochs.

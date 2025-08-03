@@ -1,0 +1,16 @@
+{"time":"2025-08-03T23:53:39.3708117+02:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"c:\\UNIFI\\LM Bio UniFi\\II ANNO\\SECONDO SEMESTRE\\APPLI OF MACHINE LEARNING\\AML_Labs\\Exercise\\wandb\\run-20250803_235339-eebpak0e\\logs\\debug-core.log"}
+{"time":"2025-08-03T23:53:39.4921856+02:00","level":"INFO","msg":"created new stream","id":"eebpak0e"}
+{"time":"2025-08-03T23:53:39.4921856+02:00","level":"INFO","msg":"stream: started","id":"eebpak0e"}
+{"time":"2025-08-03T23:53:39.4921856+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"eebpak0e"}
+{"time":"2025-08-03T23:53:39.4921856+02:00","level":"INFO","msg":"handler: started","stream_id":"eebpak0e"}
+{"time":"2025-08-03T23:53:39.4921856+02:00","level":"INFO","msg":"sender: started","stream_id":"eebpak0e"}
+{"time":"2025-08-03T23:53:40.1304226+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-04T00:02:23.1724885+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-04T00:02:23.1724885+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-04T00:02:24.1480685+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-04T00:02:24.1972867+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading history steps 39-40, summary, console lines 179-191","runtime_seconds":0.0492182}],"total_operations":1}}
+{"time":"2025-08-04T00:02:24.461176+02:00","level":"INFO","msg":"stream: closing","id":"eebpak0e"}
+{"time":"2025-08-04T00:02:24.461176+02:00","level":"INFO","msg":"handler: closed","stream_id":"eebpak0e"}
+{"time":"2025-08-04T00:02:24.461176+02:00","level":"INFO","msg":"sender: closed","stream_id":"eebpak0e"}
+{"time":"2025-08-04T00:02:24.461176+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"eebpak0e"}
+{"time":"2025-08-04T00:02:24.4615495+02:00","level":"INFO","msg":"stream: closed","id":"eebpak0e"}

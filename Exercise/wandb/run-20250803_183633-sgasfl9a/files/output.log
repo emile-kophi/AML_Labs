@@ -1,0 +1,31 @@
+Epoch 1/50
+  Train_Loss: 2.3456 | Train_Acc: 0.1294
+  Val_Loss: 2.3413 | Val_Acc: 0.1353
+
+Epoch 2/50
+  Train_Loss: 2.3460 | Train_Acc: 0.1297
+  Val_Loss: 2.3413 | Val_Acc: 0.1353
+
+  Δ(val_loss) < 0.001 for 1 consecutive epoch(s)
+Epoch 3/50
+  Train_Loss: 2.3451 | Train_Acc: 0.1299
+  Val_Loss: 2.3413 | Val_Acc: 0.1353
+
+  Δ(val_loss) < 0.001 for 2 consecutive epoch(s)
+Epoch 4/50
+  Train_Loss: 2.3455 | Train_Acc: 0.1294
+  Val_Loss: 2.3413 | Val_Acc: 0.1353
+
+  Δ(val_loss) < 0.001 for 3 consecutive epoch(s)
+Epoch 5/50
+  Train_Loss: 2.3456 | Train_Acc: 0.1300
+  Val_Loss: 2.3413 | Val_Acc: 0.1353
+
+  Δ(val_loss) < 0.001 for 4 consecutive epoch(s)
+Epoch 6/50
+  Train_Loss: 2.3457 | Train_Acc: 0.1294
+  Val_Loss: 2.3413 | Val_Acc: 0.1353
+
+  Δ(val_loss) < 0.001 for 5 consecutive epoch(s)
+Early stopping due to stagnation
+Epoch 6: No significant change (|Δ| < 0.001) for 5 consecutive epochs.

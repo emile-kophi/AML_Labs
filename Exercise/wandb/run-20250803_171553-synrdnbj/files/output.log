@@ -1,0 +1,36 @@
+Epoch 1/50
+  Train_Loss: 0.4254 | Train_Acc: 0.8714
+  Val_Loss: 0.1739 | Val_Acc: 0.9460
+
+Epoch 2/50
+  Train_Loss: 0.1899 | Train_Acc: 0.9436
+  Val_Loss: 0.1315 | Val_Acc: 0.9602
+
+Epoch 3/50
+  Train_Loss: 0.1440 | Train_Acc: 0.9571
+  Val_Loss: 0.1134 | Val_Acc: 0.9657
+
+Epoch 4/50
+  Train_Loss: 0.1210 | Train_Acc: 0.9626
+  Val_Loss: 0.0913 | Val_Acc: 0.9725
+
+Epoch 5/50
+  Train_Loss: 0.1038 | Train_Acc: 0.9688
+  Val_Loss: 0.0941 | Val_Acc: 0.9705
+
+Epoch 6/50
+  Train_Loss: 0.0950 | Train_Acc: 0.9713
+  Val_Loss: 0.0792 | Val_Acc: 0.9742
+
+Epoch 7/50
+  Train_Loss: 0.0877 | Train_Acc: 0.9721
+  Val_Loss: 0.0920 | Val_Acc: 0.9703
+
+  Warning: val_loss > best_val_loss + delta_overfit = 0.0892
+Epoch 8/50
+  Train_Loss: 0.0772 | Train_Acc: 0.9759
+  Val_Loss: 0.0916 | Val_Acc: 0.9730
+
+  Warning: val_loss > best_val_loss + delta_overfit = 0.0892
+Early stopping due to overfitting
+Epoch 8: val_loss has been higher than best_val_loss + delta (0.01) for 2 epochs.

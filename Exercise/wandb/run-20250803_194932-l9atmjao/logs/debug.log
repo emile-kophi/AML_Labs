@@ -1,0 +1,34 @@
+2025-08-03 19:49:32,363 INFO    MainThread:11904 [wandb_setup.py:_flush():67] Current SDK version is 0.19.8
+2025-08-03 19:49:32,363 INFO    MainThread:11904 [wandb_setup.py:_flush():67] Configure stats pid to 11904
+2025-08-03 19:49:32,363 INFO    MainThread:11904 [wandb_setup.py:_flush():67] Loading settings from C:\Users\emile\.config\wandb\settings
+2025-08-03 19:49:32,363 INFO    MainThread:11904 [wandb_setup.py:_flush():67] Loading settings from c:\UNIFI\LM Bio UniFi\II ANNO\SECONDO SEMESTRE\APPLI OF MACHINE LEARNING\AML_Labs\Exercise\wandb\settings
+2025-08-03 19:49:32,364 INFO    MainThread:11904 [wandb_setup.py:_flush():67] Loading settings from environment variables
+2025-08-03 19:49:32,364 INFO    MainThread:11904 [wandb_init.py:setup_run_log_directory():647] Logging user logs to c:\UNIFI\LM Bio UniFi\II ANNO\SECONDO SEMESTRE\APPLI OF MACHINE LEARNING\AML_Labs\Exercise\wandb\run-20250803_194932-l9atmjao\logs\debug.log
+2025-08-03 19:49:32,364 INFO    MainThread:11904 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to c:\UNIFI\LM Bio UniFi\II ANNO\SECONDO SEMESTRE\APPLI OF MACHINE LEARNING\AML_Labs\Exercise\wandb\run-20250803_194932-l9atmjao\logs\debug-internal.log
+2025-08-03 19:49:32,364 INFO    MainThread:11904 [wandb_init.py:monkeypatch_ipython():599] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x00000219D3975490>
+2025-08-03 19:49:32,365 INFO    MainThread:11904 [wandb_init.py:init():761] calling init triggers
+2025-08-03 19:49:32,365 INFO    MainThread:11904 [wandb_init.py:init():766] wandb.init called with sweep_config: {}
+config: {'_wandb': {}}
+2025-08-03 19:49:32,365 INFO    MainThread:11904 [wandb_init.py:init():784] starting backend
+2025-08-03 19:49:32,366 INFO    MainThread:11904 [wandb_init.py:init():788] sending inform_init request
+2025-08-03 19:49:32,394 INFO    MainThread:11904 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=spawn, using: spawn
+2025-08-03 19:49:32,395 INFO    MainThread:11904 [wandb_init.py:init():798] backend started and connected
+2025-08-03 19:49:32,400 INFO    MainThread:11904 [wandb_run.py:_label_probe_notebook():1204] probe notebook
+2025-08-03 19:49:32,402 INFO    MainThread:11904 [wandb_init.py:init():891] updated telemetry
+2025-08-03 19:49:32,466 INFO    MainThread:11904 [wandb_init.py:init():915] communicating run to backend with 90.0 second timeout
+2025-08-03 19:49:33,251 INFO    MainThread:11904 [wandb_init.py:init():990] starting run threads in backend
+2025-08-03 19:49:33,512 INFO    MainThread:11904 [wandb_run.py:_console_start():2375] atexit reg
+2025-08-03 19:49:33,512 INFO    MainThread:11904 [wandb_run.py:_redirect():2227] redirect: wrap_raw
+2025-08-03 19:49:33,512 INFO    MainThread:11904 [wandb_run.py:_redirect():2292] Wrapping output streams.
+2025-08-03 19:49:33,513 INFO    MainThread:11904 [wandb_run.py:_redirect():2315] Redirects installed.
+2025-08-03 19:49:33,516 INFO    MainThread:11904 [wandb_init.py:init():1032] run started, returning control to user process
+2025-08-03 19:55:12,788 INFO    MainThread:11904 [wandb_run.py:_finish():2112] finishing run emile-agbedanu-none/AML_MLP/l9atmjao
+2025-08-03 19:55:12,789 INFO    MainThread:11904 [jupyter.py:save_history():458] not saving jupyter history
+2025-08-03 19:55:12,789 INFO    MainThread:11904 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-08-03 19:55:12,789 INFO    MainThread:11904 [wandb_init.py:_jupyter_teardown():581] cleaning up jupyter logic
+2025-08-03 19:55:12,789 INFO    MainThread:11904 [wandb_run.py:_atexit_cleanup():2340] got exitcode: 0
+2025-08-03 19:55:12,789 INFO    MainThread:11904 [wandb_run.py:_restore():2322] restore
+2025-08-03 19:55:12,789 INFO    MainThread:11904 [wandb_run.py:_restore():2328] restore done
+2025-08-03 19:55:14,025 INFO    MainThread:11904 [wandb_run.py:_footer_history_summary_info():3956] rendering history
+2025-08-03 19:55:14,025 INFO    MainThread:11904 [wandb_run.py:_footer_history_summary_info():3988] rendering summary
+2025-08-03 19:55:14,025 INFO    MainThread:11904 [wandb_run.py:_footer_sync_info():3917] logging synced files

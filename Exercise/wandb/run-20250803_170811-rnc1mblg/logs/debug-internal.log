@@ -1,0 +1,26 @@
+{"time":"2025-08-03T17:08:12.0671757+02:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"c:\\UNIFI\\LM Bio UniFi\\II ANNO\\SECONDO SEMESTRE\\APPLI OF MACHINE LEARNING\\AML_Labs\\Exercise\\wandb\\run-20250803_170811-rnc1mblg\\logs\\debug-core.log"}
+{"time":"2025-08-03T17:08:12.866132+02:00","level":"INFO","msg":"created new stream","id":"rnc1mblg"}
+{"time":"2025-08-03T17:08:12.8671756+02:00","level":"INFO","msg":"stream: started","id":"rnc1mblg"}
+{"time":"2025-08-03T17:08:12.8671756+02:00","level":"INFO","msg":"sender: started","stream_id":"rnc1mblg"}
+{"time":"2025-08-03T17:08:12.8666546+02:00","level":"INFO","msg":"handler: started","stream_id":"rnc1mblg"}
+{"time":"2025-08-03T17:08:12.8671756+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"rnc1mblg"}
+{"time":"2025-08-03T17:08:13.3710624+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-03T17:10:27.3831919+02:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-08-03T17:10:27.3901625+02:00","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-08-03T17:10:27.3970361+02:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-08-03T17:14:36.0872818+02:00","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-08-03T17:14:36.0931197+02:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-08-03T17:14:40.0773838+02:00","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-08-03T17:14:40.0856298+02:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-08-03T17:14:43.5294374+02:00","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-08-03T17:14:43.5329473+02:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-08-03T17:15:53.1881385+02:00","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-08-03T17:15:53.2097034+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-03T17:15:53.2109805+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-03T17:15:54.2270132+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading wandb-summary.json","runtime_seconds":0.472901,"progress":"231B/231B"},{"desc":"uploading output.log","runtime_seconds":0.472901,"progress":"1.0KB/1.0KB"},{"desc":"uploading config.yaml","runtime_seconds":0.2277283,"progress":"627B/627B"}],"total_operations":3}}
+{"time":"2025-08-03T17:15:54.3945228+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-03T17:15:54.7722809+02:00","level":"INFO","msg":"stream: closing","id":"rnc1mblg"}
+{"time":"2025-08-03T17:15:54.7722809+02:00","level":"INFO","msg":"handler: closed","stream_id":"rnc1mblg"}
+{"time":"2025-08-03T17:15:54.7722809+02:00","level":"INFO","msg":"sender: closed","stream_id":"rnc1mblg"}
+{"time":"2025-08-03T17:15:54.7722809+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"rnc1mblg"}
+{"time":"2025-08-03T17:15:54.7722809+02:00","level":"INFO","msg":"stream: closed","id":"rnc1mblg"}

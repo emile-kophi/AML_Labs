@@ -1,0 +1,16 @@
+{"time":"2025-08-03T23:31:41.4984237+02:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"c:\\UNIFI\\LM Bio UniFi\\II ANNO\\SECONDO SEMESTRE\\APPLI OF MACHINE LEARNING\\AML_Labs\\Exercise\\wandb\\run-20250803_233141-2ka57cny\\logs\\debug-core.log"}
+{"time":"2025-08-03T23:31:41.6100798+02:00","level":"INFO","msg":"created new stream","id":"2ka57cny"}
+{"time":"2025-08-03T23:31:41.6100798+02:00","level":"INFO","msg":"stream: started","id":"2ka57cny"}
+{"time":"2025-08-03T23:31:41.6100798+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"2ka57cny"}
+{"time":"2025-08-03T23:31:41.6106877+02:00","level":"INFO","msg":"handler: started","stream_id":"2ka57cny"}
+{"time":"2025-08-03T23:31:41.6106877+02:00","level":"INFO","msg":"sender: started","stream_id":"2ka57cny"}
+{"time":"2025-08-03T23:31:42.017995+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-03T23:39:14.6156151+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-03T23:39:14.6166339+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-03T23:39:15.5777419+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-03T23:39:15.6398571+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading history steps 30-30, summary, console lines 130-136","runtime_seconds":0.0621152}],"total_operations":1}}
+{"time":"2025-08-03T23:39:15.9166976+02:00","level":"INFO","msg":"stream: closing","id":"2ka57cny"}
+{"time":"2025-08-03T23:39:15.9166976+02:00","level":"INFO","msg":"handler: closed","stream_id":"2ka57cny"}
+{"time":"2025-08-03T23:39:15.9166976+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"2ka57cny"}
+{"time":"2025-08-03T23:39:15.9166976+02:00","level":"INFO","msg":"sender: closed","stream_id":"2ka57cny"}
+{"time":"2025-08-03T23:39:15.9290797+02:00","level":"INFO","msg":"stream: closed","id":"2ka57cny"}

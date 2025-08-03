@@ -1,0 +1,94 @@
+Epoch 1/50
+  Train_Loss: 0.3453 | Train_Acc: 0.8986
+  Val_Loss: 0.1823 | Val_Acc: 0.9423
+
+Epoch 2/50
+  Train_Loss: 0.1564 | Train_Acc: 0.9524
+  Val_Loss: 0.1282 | Val_Acc: 0.9625
+
+Epoch 3/50
+  Train_Loss: 0.1104 | Train_Acc: 0.9666
+  Val_Loss: 0.1079 | Val_Acc: 0.9655
+
+Epoch 4/50
+  Train_Loss: 0.0885 | Train_Acc: 0.9723
+  Val_Loss: 0.1015 | Val_Acc: 0.9688
+
+Epoch 5/50
+  Train_Loss: 0.0741 | Train_Acc: 0.9768
+  Val_Loss: 0.0892 | Val_Acc: 0.9698
+
+Epoch 6/50
+  Train_Loss: 0.0628 | Train_Acc: 0.9801
+  Val_Loss: 0.0928 | Val_Acc: 0.9722
+
+Epoch 7/50
+  Train_Loss: 0.0572 | Train_Acc: 0.9817
+  Val_Loss: 0.0909 | Val_Acc: 0.9725
+
+Epoch 8/50
+  Train_Loss: 0.0486 | Train_Acc: 0.9842
+  Val_Loss: 0.0816 | Val_Acc: 0.9747
+
+Epoch 9/50
+  Train_Loss: 0.0443 | Train_Acc: 0.9860
+  Val_Loss: 0.0840 | Val_Acc: 0.9738
+
+Epoch 10/50
+  Train_Loss: 0.0399 | Train_Acc: 0.9873
+  Val_Loss: 0.0734 | Val_Acc: 0.9778
+
+Epoch 11/50
+  Train_Loss: 0.0345 | Train_Acc: 0.9885
+  Val_Loss: 0.0832 | Val_Acc: 0.9745
+
+Epoch 12/50
+  Train_Loss: 0.0341 | Train_Acc: 0.9880
+  Val_Loss: 0.0785 | Val_Acc: 0.9765
+
+Epoch 13/50
+  Train_Loss: 0.0274 | Train_Acc: 0.9911
+  Val_Loss: 0.0826 | Val_Acc: 0.9775
+
+Epoch 14/50
+  Train_Loss: 0.0260 | Train_Acc: 0.9915
+  Val_Loss: 0.0838 | Val_Acc: 0.9768
+
+Warning:Change in the trend of value  val_loss: best value= 0.0734 | current value= 0.0838
+Epoch 15/50
+  Train_Loss: 0.0240 | Train_Acc: 0.9921
+  Val_Loss: 0.0868 | Val_Acc: 0.9742
+
+Warning:Change in the trend of value  val_loss: best value= 0.0734 | current value= 0.0868
+Epoch 16/50
+  Train_Loss: 0.0239 | Train_Acc: 0.9919
+  Val_Loss: 0.0846 | Val_Acc: 0.9768
+
+Warning:Change in the trend of value  val_loss: best value= 0.0734 | current value= 0.0846
+Epoch 17/50
+  Train_Loss: 0.0237 | Train_Acc: 0.9916
+  Val_Loss: 0.0902 | Val_Acc: 0.9778
+
+Warning:Change in the trend of value  val_loss: best value= 0.0734 | current value= 0.0902
+Epoch 18/50
+  Train_Loss: 0.0190 | Train_Acc: 0.9935
+  Val_Loss: 0.0868 | Val_Acc: 0.9767
+
+Warning:Change in the trend of value  val_loss: best value= 0.0734 | current value= 0.0868
+Epoch 19/50
+  Train_Loss: 0.0176 | Train_Acc: 0.9942
+  Val_Loss: 0.0939 | Val_Acc: 0.9743
+
+Warning:Change in the trend of value  val_loss: best value= 0.0734 | current value= 0.0939
+Epoch 20/50
+  Train_Loss: 0.0195 | Train_Acc: 0.9931
+  Val_Loss: 0.0955 | Val_Acc: 0.9755
+
+Warning:Change in the trend of value  val_loss: best value= 0.0734 | current value= 0.0955
+Epoch 21/50
+  Train_Loss: 0.0166 | Train_Acc: 0.9947
+  Val_Loss: 0.0949 | Val_Acc: 0.9750
+
+Warning:Change in the trend of value  val_loss: best value= 0.0734 | current value= 0.0949
+Early stopping due to overfitting
+Epoch 21: val_loss is INCREASING for 8 epochs (hight risk for overfitting)

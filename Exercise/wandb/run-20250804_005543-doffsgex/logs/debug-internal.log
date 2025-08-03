@@ -1,0 +1,16 @@
+{"time":"2025-08-04T00:55:44.3889492+02:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"c:\\UNIFI\\LM Bio UniFi\\II ANNO\\SECONDO SEMESTRE\\APPLI OF MACHINE LEARNING\\AML_Labs\\Exercise\\wandb\\run-20250804_005543-doffsgex\\logs\\debug-core.log"}
+{"time":"2025-08-04T00:55:44.5050618+02:00","level":"INFO","msg":"created new stream","id":"doffsgex"}
+{"time":"2025-08-04T00:55:44.5050618+02:00","level":"INFO","msg":"stream: started","id":"doffsgex"}
+{"time":"2025-08-04T00:55:44.5050618+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"doffsgex"}
+{"time":"2025-08-04T00:55:44.5050618+02:00","level":"INFO","msg":"handler: started","stream_id":"doffsgex"}
+{"time":"2025-08-04T00:55:44.5050618+02:00","level":"INFO","msg":"sender: started","stream_id":"doffsgex"}
+{"time":"2025-08-04T00:55:44.9068613+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-04T01:01:59.8257279+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-04T01:01:59.826283+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-04T01:02:00.7792239+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-04T01:02:00.8365424+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading history steps 28-28, summary, console lines 126-132","runtime_seconds":0.0573185}],"total_operations":1}}
+{"time":"2025-08-04T01:02:01.0843508+02:00","level":"INFO","msg":"stream: closing","id":"doffsgex"}
+{"time":"2025-08-04T01:02:01.0843508+02:00","level":"INFO","msg":"handler: closed","stream_id":"doffsgex"}
+{"time":"2025-08-04T01:02:01.0843508+02:00","level":"INFO","msg":"sender: closed","stream_id":"doffsgex"}
+{"time":"2025-08-04T01:02:01.0843508+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"doffsgex"}
+{"time":"2025-08-04T01:02:01.0848575+02:00","level":"INFO","msg":"stream: closed","id":"doffsgex"}
