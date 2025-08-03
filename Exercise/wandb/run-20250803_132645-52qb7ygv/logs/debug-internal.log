@@ -1,0 +1,18 @@
+{"time":"2025-08-03T13:26:45.98707+02:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"c:\\UNIFI\\LM Bio UniFi\\II ANNO\\SECONDO SEMESTRE\\APPLI OF MACHINE LEARNING\\AML_Labs\\Exercise\\wandb\\run-20250803_132645-52qb7ygv\\logs\\debug-core.log"}
+{"time":"2025-08-03T13:26:46.3743045+02:00","level":"INFO","msg":"created new stream","id":"52qb7ygv"}
+{"time":"2025-08-03T13:26:46.3748628+02:00","level":"INFO","msg":"stream: started","id":"52qb7ygv"}
+{"time":"2025-08-03T13:26:46.3748628+02:00","level":"INFO","msg":"sender: started","stream_id":"52qb7ygv"}
+{"time":"2025-08-03T13:26:46.3754254+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"52qb7ygv"}
+{"time":"2025-08-03T13:26:46.3743045+02:00","level":"INFO","msg":"handler: started","stream_id":"52qb7ygv"}
+{"time":"2025-08-03T13:26:46.7942065+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-03T13:29:48.6456186+02:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-08-03T13:29:52.4917915+02:00","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-08-03T13:29:52.5121055+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-03T13:29:52.5167269+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-03T13:29:53.5208543+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":0.0436787}],"total_operations":1}}
+{"time":"2025-08-03T13:29:59.0864042+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-03T13:30:03.7530716+02:00","level":"INFO","msg":"stream: closing","id":"52qb7ygv"}
+{"time":"2025-08-03T13:30:03.7535961+02:00","level":"INFO","msg":"handler: closed","stream_id":"52qb7ygv"}
+{"time":"2025-08-03T13:30:03.7535961+02:00","level":"INFO","msg":"sender: closed","stream_id":"52qb7ygv"}
+{"time":"2025-08-03T13:30:03.7535961+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"52qb7ygv"}
+{"time":"2025-08-03T13:30:03.7535961+02:00","level":"INFO","msg":"stream: closed","id":"52qb7ygv"}
