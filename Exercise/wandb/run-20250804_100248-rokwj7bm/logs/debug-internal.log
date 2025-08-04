@@ -1,0 +1,16 @@
+{"time":"2025-08-04T10:02:48.9578459+02:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"c:\\UNIFI\\LM Bio UniFi\\II ANNO\\SECONDO SEMESTRE\\APPLI OF MACHINE LEARNING\\AML_Labs\\Exercise\\wandb\\run-20250804_100248-rokwj7bm\\logs\\debug-core.log"}
+{"time":"2025-08-04T10:02:49.0712915+02:00","level":"INFO","msg":"created new stream","id":"rokwj7bm"}
+{"time":"2025-08-04T10:02:49.0712915+02:00","level":"INFO","msg":"stream: started","id":"rokwj7bm"}
+{"time":"2025-08-04T10:02:49.0712915+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"rokwj7bm"}
+{"time":"2025-08-04T10:02:49.0712915+02:00","level":"INFO","msg":"handler: started","stream_id":"rokwj7bm"}
+{"time":"2025-08-04T10:02:49.0712915+02:00","level":"INFO","msg":"sender: started","stream_id":"rokwj7bm"}
+{"time":"2025-08-04T10:02:49.5182959+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-04T10:06:43.1882533+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-04T10:06:43.1887692+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-04T10:06:44.2018158+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading config.yaml","runtime_seconds":0.2094328,"progress":"627B/627B"}],"total_operations":1}}
+{"time":"2025-08-04T10:06:44.3844426+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-04T10:06:44.7402262+02:00","level":"INFO","msg":"stream: closing","id":"rokwj7bm"}
+{"time":"2025-08-04T10:06:44.7402262+02:00","level":"INFO","msg":"handler: closed","stream_id":"rokwj7bm"}
+{"time":"2025-08-04T10:06:44.7432185+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"rokwj7bm"}
+{"time":"2025-08-04T10:06:44.7432185+02:00","level":"INFO","msg":"sender: closed","stream_id":"rokwj7bm"}
+{"time":"2025-08-04T10:06:44.7452436+02:00","level":"INFO","msg":"stream: closed","id":"rokwj7bm"}

@@ -1,0 +1,16 @@
+{"time":"2025-08-04T11:17:12.0062268+02:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"c:\\UNIFI\\LM Bio UniFi\\II ANNO\\SECONDO SEMESTRE\\APPLI OF MACHINE LEARNING\\AML_Labs\\Exercise\\wandb\\run-20250804_111711-ot77iuso\\logs\\debug-core.log"}
+{"time":"2025-08-04T11:17:12.3345128+02:00","level":"INFO","msg":"created new stream","id":"ot77iuso"}
+{"time":"2025-08-04T11:17:12.3345128+02:00","level":"INFO","msg":"stream: started","id":"ot77iuso"}
+{"time":"2025-08-04T11:17:12.3351494+02:00","level":"INFO","msg":"handler: started","stream_id":"ot77iuso"}
+{"time":"2025-08-04T11:17:12.3345128+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"ot77iuso"}
+{"time":"2025-08-04T11:17:12.3351494+02:00","level":"INFO","msg":"sender: started","stream_id":"ot77iuso"}
+{"time":"2025-08-04T11:17:12.7808485+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-04T11:20:06.722685+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-04T11:20:06.7232272+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-04T11:20:07.7344616+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading wandb-summary.json","runtime_seconds":0.4948414,"progress":"231B/231B"},{"desc":"uploading config.yaml","runtime_seconds":0.1884835,"progress":"627B/627B"}],"total_operations":2}}
+{"time":"2025-08-04T11:20:07.980168+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-04T11:20:08.4098937+02:00","level":"INFO","msg":"stream: closing","id":"ot77iuso"}
+{"time":"2025-08-04T11:20:08.4098937+02:00","level":"INFO","msg":"handler: closed","stream_id":"ot77iuso"}
+{"time":"2025-08-04T11:20:08.4098937+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"ot77iuso"}
+{"time":"2025-08-04T11:20:08.4098937+02:00","level":"INFO","msg":"sender: closed","stream_id":"ot77iuso"}
+{"time":"2025-08-04T11:20:08.4105283+02:00","level":"INFO","msg":"stream: closed","id":"ot77iuso"}

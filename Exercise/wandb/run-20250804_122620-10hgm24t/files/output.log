@@ -1,0 +1,76 @@
+Epoch 1/50
+  Train_Loss: 0.3937 | Train_Acc: 0.8839
+  Val_Loss: 0.1732 | Val_Acc: 0.9472
+
+Epoch 2/50
+  Train_Loss: 0.1674 | Train_Acc: 0.9504
+  Val_Loss: 0.1312 | Val_Acc: 0.9577
+
+Epoch 3/50
+  Train_Loss: 0.1196 | Train_Acc: 0.9635
+  Val_Loss: 0.1022 | Val_Acc: 0.9680
+
+Epoch 4/50
+  Train_Loss: 0.0929 | Train_Acc: 0.9717
+  Val_Loss: 0.0968 | Val_Acc: 0.9708
+
+Epoch 5/50
+  Train_Loss: 0.0763 | Train_Acc: 0.9764
+  Val_Loss: 0.0909 | Val_Acc: 0.9720
+
+Epoch 6/50
+  Train_Loss: 0.0646 | Train_Acc: 0.9792
+  Val_Loss: 0.0852 | Val_Acc: 0.9713
+
+Epoch 7/50
+  Train_Loss: 0.0564 | Train_Acc: 0.9822
+  Val_Loss: 0.0768 | Val_Acc: 0.9777
+
+Epoch 8/50
+  Train_Loss: 0.0470 | Train_Acc: 0.9852
+  Val_Loss: 0.0828 | Val_Acc: 0.9740
+
+Epoch 9/50
+  Train_Loss: 0.0422 | Train_Acc: 0.9856
+  Val_Loss: 0.0785 | Val_Acc: 0.9743
+
+Epoch 10/50
+  Train_Loss: 0.0366 | Train_Acc: 0.9878
+  Val_Loss: 0.0838 | Val_Acc: 0.9767
+
+Epoch 11/50
+  Train_Loss: 0.0334 | Train_Acc: 0.9890
+  Val_Loss: 0.0824 | Val_Acc: 0.9762
+
+Epoch 12/50
+  Train_Loss: 0.0294 | Train_Acc: 0.9899
+  Val_Loss: 0.0809 | Val_Acc: 0.9775
+
+Epoch 13/50
+  Train_Loss: 0.0272 | Train_Acc: 0.9906
+  Val_Loss: 0.0915 | Val_Acc: 0.9785
+
+Warning:Change in the trend of value  val_loss: best value= 0.0768 | current value= 0.0915
+Epoch 14/50
+  Train_Loss: 0.0254 | Train_Acc: 0.9912
+  Val_Loss: 0.0891 | Val_Acc: 0.9788
+
+Warning:Change in the trend of value  val_loss: best value= 0.0768 | current value= 0.0891
+Epoch 15/50
+  Train_Loss: 0.0213 | Train_Acc: 0.9927
+  Val_Loss: 0.0900 | Val_Acc: 0.9773
+
+Warning:Change in the trend of value  val_loss: best value= 0.0768 | current value= 0.0900
+  Δ(val_loss) < 0.001 for 1 consecutive epoch(s)
+Epoch 16/50
+  Train_Loss: 0.0219 | Train_Acc: 0.9927
+  Val_Loss: 0.0927 | Val_Acc: 0.9785
+
+Warning:Change in the trend of value  val_loss: best value= 0.0768 | current value= 0.0927
+Epoch 17/50
+  Train_Loss: 0.0205 | Train_Acc: 0.9926
+  Val_Loss: 0.1058 | Val_Acc: 0.9753
+
+Warning:Change in the trend of value  val_loss: best value= 0.0768 | current value= 0.1058
+Early stopping due to overfitting
+Epoch 17: val_loss is INCREASING for 5 epochs (hight risk for overfitting)
