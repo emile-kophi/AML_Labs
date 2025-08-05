@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+
+# Ignora i file temporanei
+*~
+*.log
+
+# Ignora i file dei modelli
+*.pt
+*.pth
+
+# Ignora i log e le cartelle di WandB
+wandb/
+
+# Ignora le cartelle dei dati
+data/
