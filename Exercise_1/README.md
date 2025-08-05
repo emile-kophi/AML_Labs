@@ -107,10 +107,10 @@ The goal was to investigate whether adding skip connections improves the trainab
 **Architecture**:  
 `784 → FC(110) → [ResidualBlock × 2] → FC(10)`
 
-The Training Setup is the same of the previous exercise 
-
- **Results**: Residual connections provided Faster convergence (training stopped at epoch 11 vs 17 for the plain MLP).  
-Slightly better performance on the test set.  
+The Training Setup is the same of the previous exercise. 
+### **Comparison MLP Vs ResidualMLP**
+Residual connections provided Faster convergence (training stopped at epoch 11 vs 17 for the plain MLP).  
+Slightly better performance on the test set. 
 
 | Model         | Epochs | Test Loss | Test Accuracy | Test Precision |
 |---------------|--------|-----------|---------------|----------------|
@@ -146,3 +146,53 @@ fc2.weight: 0.4143
 | Learning Curve |
 |:--------------:|
 | <img src="images/learning_curve_resmlp.png" alt="Learning Curve" width="400"/> |
+
+
+## **Exercise 1.3 — CNN vs Residual CNN on CIFAR-10**
+
+In this exercise, the experiment from Exercise 1.2 was repeated, but replacing the MLP with **Convolutional Neural Networks (CNNs)**.  
+The objective was to verify if deeper CNNs without residual connections necessarily yield better results, and whether residual connections improve trainability in deeper architectures.  
+CIFAR-10 was chosen as the dataset, as MNIST is too simple to show significant differences for this type of architecture.
+
+### **Model Description**
+Two model variants were implemented: a **Simple CNN** and a **Residual CNN**.  
+
+The Simple CNN applies successive convolutional layers with ReLU activation, doubling the number of channels at each step and applying max pooling every two layers. After feature extraction, a fully connected layer reduces the feature map to 128 neurons, followed by dropout and the final classification layer.
+
+The Residual CNN starts with a single convolution + batch normalization + ReLU block, followed by a configurable number of **ResNet BasicBlocks** (as in the original ResNet architecture), which implement skip connections over sequences of 3×3 convolutions.  
+After the residual stack, global average pooling reduces the spatial dimensions, followed by dropout and a final linear layer for classification.
+
+ **Training Setup**: Dataset: CIFAR-10, with standard train/validation/test split (90% / 10% / test set).  
+Batch Size: 128  
+Optimizer: Adam, learning rate = 1e-3  
+Loss Function: CrossEntropyLoss  
+Data Augmentation: Random cropping, horizontal flipping, normalization with dataset statistics.  
+Dropout: 0.2 in the fully connected layers.  
+Early Stopping: Applied to prevent overfitting.  
+
+### **Results**
+Residual connections provided consistent improvements in both convergence speed and final accuracy, especially for deeper networks.  
+Without residual connections, deeper networks did not always outperform shallower ones, confirming the hypothesis from the ResNet paper.
+
+| Model         | Depth | Epochs | Test Loss | Test Accuracy | Test Precision |
+|---------------|-------|--------|-----------|---------------|----------------|
+| SimpleCNN     | 2     | 13     | 1.4563    | 67.89%        | 68.16%         |
+| ResidualCNN   | 2     | 30     | 0.6779    | 76.91%        | 78.80%         |
+| SimpleCNN     | 3     | 12     | 1.2307    | 74.14%        | 74.44%         |
+| ResidualCNN   | 3     | 30     | 0.6206    | 80.48%        | 81.58%         |
+| SimpleCNN     | 6     | 15     | 0.9892    | 81.11%        | 81.21%         |
+| ResidualCNN   | 6     | 29     | 0.5847    | 83.67%        | 84.50%         |
+
+The results show that residual connections improve performance across all depths, but their relative impact is stronger in shallower networks.
+For depth = 2, the accuracy improvement is around +9%, while for depth = 6 it is closer to +2.5%.
+This suggests that in small networks, skip connections significantly enhance information flow and help avoid underfitting.
+In deeper architectures, the gains are smaller in percentage terms, but residual connections still provide benefits in terms of convergence stability and lower final loss.
+These observations partially diverge from the common narrative of residuals being primarily useful for very deep networks, showing they can also be valuable in shallow architectures.
+### **WandB Metrics Tracking**
+
+| Training Loss | Validation Loss |
+|:-------------:|:---------------:|
+| ![Training Loss](images/training_loss_cnn.png) | ![Validation Loss](images/validation_loss_cnn.png) |
+
+The results confirm the exercise’s goal: deeper CNNs without residuals do not consistently improve performance, while residual connections help maintain stable training and avoid severe overfitting, especially in shallower architectures.
+
