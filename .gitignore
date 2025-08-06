@@ -6,9 +6,9 @@ __pycache__/
 *~
 *.log
 
-# Ignora i file dei modelli
-*.pt
-*.pth
+# # Ignora i file dei modelli
+# *.pt
+# *.pth
 
 # Ignora i log e le cartelle di WandB
 wandb/
