@@ -15,3 +15,13 @@ wandb/
 
 # Ignora le cartelle dei dati
 data/
+# Ignora i checkpoint e i file generati dal training
+results/
+*.safetensors
+*.json
+*.bin
+*.pt
+# Ignora i file di log di TensorBoard
+events.out.tfevents.*
+# Ignora la cartella dei log
+logs/
