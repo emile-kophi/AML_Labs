@@ -58,6 +58,7 @@ The results will be added after training completion:
 | Recall              |0.8667 |
 | F1 score            |0.8667|
 | Loss            | **0.5190** |
+| *Runing time*     | **55 min**|
 
 
 Below will be added the plots showing the model’s learning progress over time:
@@ -74,3 +75,23 @@ Below will be added the plots showing the model’s learning progress over time:
 The SVM baseline already showed strong performance thanks to the quality of DistilBERT embeddings.  
 However, full fine-tuning of DistilBERT is expected to provide better results by adapting the model parameters directly to the Rotten Tomatoes dataset.  
 This experiment demonstrates the flexibility of the HuggingFace ecosystem to move from simple feature extraction to complete fine-tuning with minimal changes in workflow.
+
+## **Exercise 3.1 — Efficient Fine-tuning with PEFT (LoRA)**
+
+In this exercise, I explored ways to make fine-tuning DistilBERT more efficient for sentiment analysis on the Rotten Tomatoes dataset. In the previous exercise, I had fine-tuned the entire model, which proved to be quite expensive in terms of computation. Here, I focused on parameter-efficient fine-tuning using the HuggingFace **PEFT library**, specifically implementing **LoRA (Low-Rank Adaptation)**.
+
+The main idea was to adapt only a small subset of the model’s weights, namely the query and value projection layers (***`q_lin`*** and ***`v_lin`***), while keeping the rest of the parameters frozen. By doing this, I was able to dramatically reduce the number of trainable parameters and the memory footprint, without modifying the existing training pipeline. Mixed-precision training was also used to further save GPU memory and speed up training. 
+
+During training, I monitored the standard evaluation metrics—accuracy, precision, recall, and F1 score—on the validation set to ensure the model was learning effectively. Despite training only a fraction of the parameters, the model achieved performance close to the full fine-tuned DistilBERT, confirming that LoRA can efficiently adapt pre-trained transformers to downstream tasks.
+
+| Metric            | Value |
+|-------------------|-------|
+| Accuracy | **0.8667**|
+| Precision           | 0.8668 |
+| Recall              |0.8667 |
+| F1 score            |0.8667|
+| Loss            | **0.5190** |
+| *Runing time*     | **55 min** |
+Visualizations of evaluation loss and accuracy over epochs can be added here to illustrate the training dynamics.
+
+Overall, this exercise demonstrated that parameter-efficient fine-tuning is a viable alternative to full fine-tuning. It allows significant savings in computation and memory while still maintaining strong performance, making it ideal for scenarios with limited hardware resources or for experimenting with larger models.
