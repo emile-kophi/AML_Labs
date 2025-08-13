@@ -2,107 +2,75 @@
 
 ## **Overview**
 
-This laboratory exercise explores how to work with the HuggingFace ecosystem to adapt pre-trained transformer models to new tasks.  
-The main focus is on understanding the inner workings of HuggingFace abstractions and building a reproducible adaptation pipeline for text classification.  
-
-Throughout the exercises, students will:  
-- Download, explore, and preprocess datasets using the HuggingFace `datasets` library.  
-- Use pre-trained transformer models, specifically **DistilBERT**, for feature extraction and fine-tuning.  
-- Build stable baselines with classical classifiers (e.g., SVM) using transformer embeddings.  
-- Fine-tune models for sequence classification tasks with HuggingFace `Trainer` and `TrainingArguments`.  
-- Explore efficient fine-tuning techniques, including parameter-efficient methods using HuggingFace PEFT.  
-
-The laboratory emphasizes hands-on experimentation, incremental pipeline development, and careful evaluation of model performance.
+In this lab, I worked with the HuggingFace ecosystem to adapt a pre-trained transformer model to a new text classification task.  
+The goal was to understand how the HuggingFace abstractions work and to build a reproducible pipeline, starting from dataset exploration and ending with full fine-tuning of the model.  
+I first created a solid baseline using an SVM classifier on DistilBERT embeddings, and then compared it to a fine-tuned version of DistilBERT trained directly on the dataset.
 
 ## **Introduction**
 
-Transformers have become the backbone of modern natural language processing, but working with them can be challenging due to their complexity.  
-The HuggingFace ecosystem provides high-level abstractions that simplify tasks such as feature extraction, fine-tuning, and model deployment.  
+Transformers are the backbone of most modern NLP models, but using them directly can be complex.  
+HuggingFace makes the process much easier, allowing a smooth transition from feature extraction to fine-tuning with just a few lines of code. 
+In this lab, the Rotten Tomatoes dataset was loaded and inspected to verify its structure.  
+The dataset contains the following splits and sizes:
 
-This laboratory is structured in progressive exercises:
+| Split       | Number of Examples | Labels       |
+|------------:|-----------------:|-------------|
+| Train       | 8530             | 0, 1        |
+| Validation  | 1066             | 0, 1        |
+| Test        | 1066             | 0, 1        | 
 
-1. **Sentiment Analysis Warm-up**  
-   - Students start from a pre-trained DistilBERT model and use it as a feature extractor.  
-   - The Rotten Tomatoes dataset is loaded and explored to verify splits, labels, and sample sentences.  
-   - DistilBERT embeddings are extracted from the last hidden layer for selected samples.  
-   - A baseline classifier (e.g., SVM) is trained on these embeddings to establish a stable reference point for further experiments.  
+In this lab, I followed a progressive approach:  
+1. Explore the Rotten Tomatoes dataset.  
+2. Use DistilBERT as a pure feature extractor to train a simple classifier.  
+3. Perform full fine-tuning of DistilBERT for sentiment analysis, comparing the results to the baseline.
 
-2. **Fine-tuning DistilBERT**  
-   - The model is prepared for sequence classification by adding a classification head on top of the `[CLS]` token representation.  
-   - Dataset splits are tokenized, and input IDs and attention masks are generated for training.  
-   - A HuggingFace `Trainer` is configured with data collation, evaluation metrics, and training arguments.  
-   - Students learn to perform full fine-tuning on the training split and evaluate performance on validation and test sets.  
+## **Exercise 1 — Sentiment Analysis**
 
-3. **Efficient Fine-tuning Techniques**  
-   - Explores methods to reduce the computational cost of fine-tuning, such as freezing layers or using parameter-efficient approaches from the HuggingFace **PEFT library**.  
-   - Emphasis is on maintaining performance while minimizing resource usage and training time.  
+I started by loading the dataset from HuggingFace and checking the train, validation, and test splits, along with the label distribution.  
+I also inspected a few sample sentences to get familiar with the text style and content.
 
-## **Key Insights from Exercises 1.1, 1.2, and 1.3**
+Next, I loaded the pre-trained DistilBERT model and tokenizer.  
+I took a sample from the training set, tokenized it, and ran a forward pass to obtain the last hidden states.  
+I verified the position of the *`[CLS]`* token, since this is where I would extract the embeddings for the SVM classifier.
 
-- **Dataset Exploration**:  
-  - Verified available splits (`train`, `validation`, `test`) and label distribution.  
-  - Inspected sample sentences to understand dataset structure and content.  
+I then implemented a function to extract `[CLS]` embeddings for all sentences in the three dataset splits.  
+These embeddings were used to train a linear SVM on the training set, which I then evaluated on the validation and test sets.  
+The results were solid for a non-fine-tuned model:  
+**Validation accuracy** = **0.8189**  
+Test accuracy = 0.8068
 
-- **Feature Extraction with DistilBERT**:  
-  - Loaded pre-trained DistilBERT and tokenizer.  
-  - Tokenized sample texts and performed forward passes to extract **last hidden states**.  
-  - Checked the position of the `[CLS]` token to ensure embeddings are extracted from the correct position.  
-
-- **Baseline Classifier (Exercise 1.3)**:  
-  - Used the `[CLS]` token embeddings as input features for a **linear SVM classifier**.  
-  - Trained the SVM on the training split and evaluated on validation and test sets.  
-  - Achieved reasonable baseline performance, confirming that DistilBERT embeddings capture meaningful semantic information even before fine-tuning.  
-
-- **Initial Observations**:  
-  - Pre-trained transformer embeddings provide strong representations for downstream classification tasks.  
-  - Verifying token positions and extracting the correct embeddings is crucial for stable baseline construction.  
-  - Baseline classifiers allow quick evaluation and comparison before committing to full fine-tuning.  
-
-By the end of this laboratory, students will be able to take any pre-trained transformer model and adapt it to a specific NLP task, while understanding the key abstractions, tokenization strategies, and design choices within HuggingFace workflows.
+*This confirmed that even without task-specific training, transformer embeddings contain meaningful semantic information for classification.*
 
 ## **Exercise 2 — Fine-tuning DistilBERT**
 
-In this exercise, the pre-trained DistilBERT model is adapted to the Rotten Tomatoes sentiment analysis dataset for **sequence classification**.  
+After establishing the baseline, the model was fine-tuned for the sentiment classification task.  
+The tokenization step was applied to all splits with truncation and padding to a fixed length.  
+DistilBERT was loaded with an added classification head for binary classification and all parameters were set to be trainable.
+A training loop was implemented using HuggingFace’s `Trainer` API, with dynamic batch padding, evaluation during training, and model checkpointing based on the best validation accuracy.  
+The evaluation metrics included accuracy, precision, recall, and F1 score.
 
-### **Tokenization and Dataset Preparation**
+The results will be added after training completion:
 
-- All dataset splits (`train`, `validation`, `test`) are tokenized using the DistilBERT tokenizer.  
-- Padding and truncation are applied to ensure uniform sequence length.  
-- Tokenized datasets are formatted to be compatible with PyTorch (`input_ids`, `attention_mask`, `label`).  
-- Number of output classes is set to 2 (positive vs. negative sentiment).
+| Metric            | Value |
+|-------------------|-------|
+| Accuracy | **0.8667**|
+| Precision           | 0.8668 |
+| Recall              |0.8667 |
+| F1 score            |0.8667|
+| Loss            | **0.5190** |
 
-### **Model Setup**
 
-- DistilBERT is instantiated with a **sequence classification head**, initialized randomly for the classification task.  
-- The model is configured for **fine-tuning**, allowing gradients to update all layers.  
+Below will be added the plots showing the model’s learning progress over time:
 
-### **Training Pipeline**
+- **Validation loss curve**  
+  ![Validation Loss Plot](path_to_val_loss_image.png)
 
-- HuggingFace `Trainer` is used to manage the training loop.  
-- A `DataCollatorWithPadding` ensures proper dynamic batch padding.  
-- Evaluation metrics include **accuracy, precision, recall, and F1 score** (weighted).  
-- Training is logged to **Weights & Biases (WandB)** for real-time monitoring.  
-- Training arguments include learning rate, batch size, number of epochs, weight decay, logging frequency, and checkpoint saving.  
-- Early stopping is implicitly handled by saving the best model at the end of training based on validation accuracy.  
+- **Validation accuracy curve**  
+  ![Validation Accuracy Plot](path_to_val_accuracy_image.png)
 
-### **Evaluation and Results**
+## Comparison with Baseline
+![](images/Svm_Modelft_comparison.png)
 
-- The fine-tuned DistilBERT model is evaluated on the validation and test splits.  
-- Comparison is made with the **SVM baseline** trained on DistilBERT embeddings (Exercise 1.3).  
-- Fine-tuning yields **higher accuracy**, demonstrating the advantage of updating model weights for the specific classification task.  
-
-**Example Results (Test Set Accuracy):**
-
-| Model                           | Accuracy |
-|---------------------------------|----------|
-| SVM (feature extractor)         | `svm_test_acc` |
-| Fine-tuned DistilBERT           | `ft_test_acc`  |
-
-- A visual comparison highlights the improvement of the fine-tuned model over the baseline SVM classifier.  
-- Fine-tuning not only leverages pre-trained embeddings but also adapts the representation to the dataset-specific task, improving overall performance.  
-
-**Key Takeaways:**
-
-- Pre-trained transformers provide strong embeddings, but task-specific fine-tuning significantly enhances classification performance.  
-- HuggingFace `Trainer` simplifies the setup of a complete fine-tuning pipeline including tokenization, batching, evaluation, and logging.  
-- Maintaining proper dataset preparation and metric computation is critical for reliable evaluation.
+The SVM baseline already showed strong performance thanks to the quality of DistilBERT embeddings.  
+However, full fine-tuning of DistilBERT is expected to provide better results by adapting the model parameters directly to the Rotten Tomatoes dataset.  
+This experiment demonstrates the flexibility of the HuggingFace ecosystem to move from simple feature extraction to complete fine-tuning with minimal changes in workflow.
