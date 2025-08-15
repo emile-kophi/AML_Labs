@@ -13,14 +13,8 @@ This repository collects a series of **deep learning laboratory exercises** cove
   - Custom training pipeline with **early stopping** based on stagnation and overfitting
   - Dataset preprocessing for MNIST, CIFAR-10, and CIFAR-100
   - Experiment tracking and visualization using Weights & Biases
-- **Experiments:**
-  - Baseline MLP on MNIST
-  - Residual MLP comparison
-  - CNN vs Residual CNN on CIFAR-10
-  - Fine-tuning pre-trained Residual CNN on CIFAR-100
-- **Highlights:** Residual connections improved **gradient flow**, convergence speed, and final accuracy. Fine-tuning pre-trained networks outperformed classical classifiers trained on frozen features.
 
-> See the [Laboratory 1 README](./Exercise_1/README.md) for full implementation and results.
+> See the [Exercise_1 README](./Exercise_1/README.md) for full implementation and results.
 
 ---
 
@@ -31,12 +25,8 @@ This repository collects a series of **deep learning laboratory exercises** cove
   - Full fine-tuning of DistilBERT for sentiment classification on Rotten Tomatoes
   - Parameter-efficient fine-tuning with **LoRA (Low-Rank Adaptation)**
   - Evaluation metrics: accuracy, precision, recall, and F1-score
-- **Highlights:** 
-  - Fine-tuning DistilBERT improved performance compared to the SVM baseline.
-  - LoRA reduced memory footprint while maintaining competitive accuracy.
-  - Demonstrates HuggingFace’s flexibility from feature extraction to full fine-tuning.
 
-> See the [Laboratory 3 README](./Exercise_3/README.md) for detailed methodology and results.
+> See the [Exercise_3 README](./Exercise_3/README.md) for detailed methodology and results.
 
 ---
 
@@ -52,12 +42,8 @@ This repository collects a series of **deep learning laboratory exercises** cove
   - Generation of adversarial examples with FGSM
   - Robustness improvement via adversarial training
   - Targeted FGSM attacks and quantitative success analysis
-- **Highlights:** 
-  - Neural networks are highly sensitive to small perturbations.
-  - Adversarial training improves robustness but does not fully eliminate vulnerabilities.
-  - Targeted attacks demonstrate controllable manipulation of model predictions.
 
-> See the [Laboratory 4 README](./Exercise_4/README.md) for full details, experiments, and results.
+> See the [Exercise_4 README](./Exercise_4/README.md) for full details, experiments, and results.
 
 ---
 
