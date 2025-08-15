@@ -60,27 +60,27 @@ This repository collects a series of **deep learning laboratory exercises** cove
 > See the [Laboratory 3 README](./Laboratory3/README.md) for full details, experiments, and results.
 
 ---
-
 ## **Repository Structure**
 
+```
 DeepLearning-Labs/
+├── Laboratory1/             # Neural networks, residual connections, CIFAR/MNIST experiments
+│   ├── README.md
+│   ├── images/              # Example images, plots, and learning curves
+│   └── models/              # Saved model checkpoints (e.g., best_model.pth)
 │
-├── Laboratory1/ # Neural networks, residual connections, CIFAR/MNIST experiments
-│ ├── README.md
-│ ├── images/ # Example images, plots, and learning curves
-│ └── models/ # Saved model checkpoints (e.g., best_model.pth)
+├── Laboratory2/             # Transformers and HuggingFace experiments
+│   └── README.md
 │
-├── Laboratory2/ # Transformers and HuggingFace experiments
-│ └── README.md
+├── Laboratory3/             # Adversarial learning and FGSM attacks
+│   ├── README.md
+│   └── images/              # Example images and plots
 │
-├── Laboratory3/ # Adversarial learning and FGSM attacks
-│ ├── README.md
-│ └── images/ # Example images and plots
+├── Laboratory4/             # Adversarial learning with FGSM, OOD detection, and targeted attacks
+│   ├── README.md
+│   ├── images/              # Example images and plots
+│   └── models/              # Saved model checkpoints (e.g., best_model_ResCNN.pth)
 │
-├── Laboratory4/ # Adversarial learning with FGSM, OOD detection, and targeted attacks
-│ ├── README.md
-│ ├── images/ # Example images and plots
-│ └── models/ # Saved model checkpoints (e.g., best_model_ResCNN.pth)
-│
-├── data/ # Datasets or dataset download scripts
-└── utils/ # Helper functions, model definitions, training utilities
+├── data/                    # Datasets or dataset download scripts
+└── utils/                   # Helper functions, model definitions, training utilities
+```
