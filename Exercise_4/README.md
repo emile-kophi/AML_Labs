@@ -81,7 +81,7 @@ The **Maximum Softmax Probability (MSP)** scores obtained from the previous exer
 | Overlap Area | 0.4758 |
 
 **ROC and Precision–Recall Curves**  
-<img src="images/ROC_and_PR_curves.png" alt="Learning Curve" width="600"/>
+<img src="images/ROC_and_PR_curves.png" alt="Learning Curve" width="800"/>
 
 ---
 
@@ -160,7 +160,7 @@ Success rate is computed over the subset of images correctly classified before t
 ![Single targeted example](images/single_step_attack.png)
 
 **Mini-grid (target = “bird”)**  
-![Targeted grid examples](images/mini_batch_attack1.png)  
-![Targeted grid examples](images/mini_batch_attack2.png)
+<img src="images/mini_batch_attack1.png" alt="Learning Curve" width="600"/>
+<img src="images/mini_batch_attack2.png" alt="Learning Curve" width="600"/>
 
 > **Note:** I also tested the targeted attack on the **on-the-fly trained model**. This model proved significantly harder to attack — in many cases, the attack either failed due to exceeding the maximum step limit, or succeeded only after roughly ten iterations. Although these results are not reported in detail here, the experiment was performed.
