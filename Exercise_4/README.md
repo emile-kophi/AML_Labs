@@ -156,10 +156,14 @@ A batch study (target = “bird”) was performed over multiple samples, measuri
 Success rate is computed over the subset of images correctly classified before the attack. Confidence increase is measured as the post-attack softmax probability for the target class minus the pre-attack probability. Perturbation magnitude is the L2 norm between adversarial and original images.
 
 ### **Qualitative Examples**
-**Single image (target = “horse”)**  
-![Single targeted example](images/single_step_attack.png)
+**Single image (target = “horse”)**   
+
+<img src="images/single_step_attack.png" alt="Learning Curve" width="600"/>
+
 
 **Mini-grid (target = “bird”)**  
+
+
 <img src="images/mini_batch_attack1.png" alt="Learning Curve" width="600"/>
 <img src="images/mini_batch_attack2.png" alt="Learning Curve" width="600"/>
 
