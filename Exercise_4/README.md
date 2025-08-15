@@ -54,7 +54,7 @@ This qualitative visualization allowed us to see that ID samples generally produ
 | Accuracy | 0.7705 |
 
 **Normalized Confusion Matrix (ID Test Set)**  
-<img src="images/confusion_matrix.png" alt="Learning Curve" width="400"/>
+<img src="images/confusion_matrix.png" alt="Learning Curve" width="600"/>
 
 **Max Softmax Probability Distributions**
 | ID Sample | OOD Sample |
@@ -81,7 +81,7 @@ The **Maximum Softmax Probability (MSP)** scores obtained from the previous exer
 | Overlap Area | 0.4758 |
 
 **ROC and Precision–Recall Curves**  
-![ROC and PR curves](images/ROC_and_PR_curves.png)
+<img src="images/ROC_and_PR_curves.png" alt="Learning Curve" width="600"/>
 
 ---
 
@@ -92,7 +92,7 @@ For this experiment, only the **untargeted attack** mode of the FGSM function wa
 
 ### **Results**
 **Example of Untargeted FGSM Attack ($\varepsilon = 0.03$)**  
-![Original](images/untargeted_attack.png)
+<img src="images/untargeted_attack.png" alt="Learning Curve" width="600"/>
 
 ---
 
