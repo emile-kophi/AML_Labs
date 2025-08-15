@@ -20,7 +20,7 @@ This repository collects a series of **deep learning laboratory exercises** cove
   - Fine-tuning pre-trained Residual CNN on CIFAR-100
 - **Highlights:** Residual connections improved **gradient flow**, convergence speed, and final accuracy. Fine-tuning pre-trained networks outperformed classical classifiers trained on frozen features.
 
-> See the [Laboratory 1 README](./Laboratory1/README.md) for full implementation and results.
+> See the [Laboratory 1 README](./Exercise_1/README.md) for full implementation and results.
 
 ---
 
@@ -36,7 +36,7 @@ This repository collects a series of **deep learning laboratory exercises** cove
   - LoRA reduced memory footprint while maintaining competitive accuracy.
   - Demonstrates HuggingFace’s flexibility from feature extraction to full fine-tuning.
 
-> See the [Laboratory 2 README](./Laboratory2/README.md) for detailed methodology and results.
+> See the [Laboratory 3 README](./Exercise_3/README.md) for detailed methodology and results.
 
 ---
 
@@ -57,30 +57,28 @@ This repository collects a series of **deep learning laboratory exercises** cove
   - Adversarial training improves robustness but does not fully eliminate vulnerabilities.
   - Targeted attacks demonstrate controllable manipulation of model predictions.
 
-> See the [Laboratory 3 README](./Laboratory3/README.md) for full details, experiments, and results.
+> See the [Laboratory 4 README](./Exercise_4/README.md) for full details, experiments, and results.
 
 ---
+
 ## **Repository Structure**
 
 ```
-DeepLearning-Labs/
-├── Laboratory1/             # Neural networks, residual connections, CIFAR/MNIST experiments
-│   ├── README.md
-│   ├── images/              # Example images, plots, and learning curves
-│   └── models/              # Saved model checkpoints (e.g., best_model.pth)
+AML_Labs/
 │
-├── Laboratory2/             # Transformers and HuggingFace experiments
-│   └── README.md
+├── Exercise_1/ # Neural networks, residual connections, CIFAR/MNIST experiments
+│ ├── README.md
+│ ├── images/ 
+│ └── models/ 
 │
-├── Laboratory3/             # Adversarial learning and FGSM attacks
-│   ├── README.md
-│   └── images/              # Example images and plots
+├── Exercise_3/ # Transformers and HuggingFace experiments
+│ ├── README.md
+│ └── images/ 
 │
-├── Laboratory4/             # Adversarial learning with FGSM, OOD detection, and targeted attacks
-│   ├── README.md
-│   ├── images/              # Example images and plots
-│   └── models/              # Saved model checkpoints (e.g., best_model_ResCNN.pth)
+├── Exercise_4/ # Adversarial learning and FGSM attacks
+│ ├── README.md
+│ ├── images/ 
+│ └── models/ 
 │
-├── data/                    # Datasets or dataset download scripts
-└── utils/                   # Helper functions, model definitions, training utilities
+└── utils/ # Helper functions, model definitions, training utilities         
 ```
