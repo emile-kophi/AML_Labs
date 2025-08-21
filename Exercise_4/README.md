@@ -38,10 +38,7 @@ In this exercise, a simple OOD detection pipeline was implemented to evaluate ho
 
 The pipeline involved:
 1. Evaluating the model on the ID test set to compute standard classification metrics such as **accuracy** and the **normalized confusion matrix**  
-2. Selecting random samples from both ID and OOD datasets to visualize:  
-   - The original input image  
-   - The raw logits output by the model  
-   - The corresponding softmax probabilities  
+2. Selecting random samples from both ID and OOD datasets to visualize: The original input image; The raw logits output by the model; The corresponding softmax probabilities  
 
 This qualitative visualization allowed us to see that ID samples generally produced high confidence scores for the correct class, while OOD samples yielded lower confidence, indicating uncertainty.
 

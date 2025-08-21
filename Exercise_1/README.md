@@ -28,29 +28,20 @@ The ***train_model*** function handles:
 - Training and validation per epoch.  
 - Automatic device detection (GPU if available).  
 - **Two Early Stopping Criteria**:  
-  1. **Stagnation-based**: stops training when `val_loss` shows no significant improvement for a fixed number of epochs (`patience` + `min_delta`).  
-  2. **Overfitting-based**: stops training if `val_loss` increases beyond a threshold (`delta_overfit`) for several consecutive epochs (`overfit_patience`).  
+  1. **Stagnation-based**: stops training when `validation loss` shows no significant improvement for a fixed number of epochs (`patience` + `min_delta`).  
+  2. **Overfitting-based**: stops training if `validation loss` increases beyond a threshold  for several consecutive epochs (`overfit_patience`).  
 - **Best model saving** (`best_model.pth`) whenever validation loss improves.  
-- **Logging to WandB**:  
-  - `train_loss`, `train_acc`  
-  - `val_loss`, `val_acc`  
-- Detailed console feedback per epoch.
+- **Logging to WandB**:  ` loss`, `accuracy` for trainig and validation dataset; Detailed console feedback per epoch.
 
 ### **Evaluation Function**
 
-The `evaluate` function provides:  
-- Average loss  
-- Accuracy  
-- Precision (weighted across classes)  
+The `evaluate` function provides:  Average loss, Accuracy, Precision (weighted across classes)  
 
 This ensures a **multi-metric evaluation** beyond simple accuracy, useful for imbalanced datasets.
 
 ## **Experiment Monitoring**
 
-WandB was used for:  
-- Real-time tracking of training and validation metrics.  
-- Visualization of loss/accuracy trends.  
-- Comparison between different model architectures.
+WandB was used for: Real-time tracking of training and validation metrics; Visualization of loss/accuracy trends; Comparison between different model architectures.
 
 ---
 
@@ -73,13 +64,7 @@ This results in the architecture:
 `784 → 128 → 64 → Dropout(0.2) → 10`
 
 The implementation is fully contained within the project’s codebase, and uses a modular design to facilitate modifications.  
-The model was trained using a custom training loop that supports:  
-Stratified dataset split: 90% training, 10% validation  
-Maximum epochs: 50  
-Batch size: 128  
-Optimizer: Adam (learning rate = 1e-3)  
-Loss function: CrossEntropyLoss  
-Early stopping based on stagnation and overfitting detection
+The model was trained using a custom training loop that supports:  Stratified dataset split: 90% training, 10% validation; Maximum epochs: 50; Batch size: 128; Optimizer: Adam (learning rate = 1e-3); Loss function: CrossEntropyLoss; Early stopping based on stagnation and overfitting detection
 
 The training converged in fewer than the maximum allowed epochs thanks to early stopping.  
 On the test set, the model achieved:  
