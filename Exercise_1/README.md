@@ -56,7 +56,7 @@ WandB was used for:
 
 ## **Exercises**
 
-### **Exercise 1  MLP with Two Hidden Layers on MNIST**
+### **Exercise 1:  MLP with Two Hidden Layers on MNIST**
 
 This first exercise introduces a baseline model for handwritten digit classification on the MNIST dataset: a Multilayer Perceptron (MLP) with **two hidden layers**.  
 The aim is to establish a solid reference point for later comparisons with deeper and more complex architectures, in line with the experimental spirit of the ResNet paper.
