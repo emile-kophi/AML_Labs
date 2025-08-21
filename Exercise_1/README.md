@@ -2,8 +2,7 @@
 
 ## **Overview**
 
-This laboratory explores the implementation and comparison of different neural network architectures, ranging from simple MLPs to more complex CNNs with residual connections, using PyTorch.  
-The main focus is to investigate the benefits of **residual connections** and **fine-tuning techniques** on model performance.
+This laboratory explores the implementation and comparison of different neural network architectures, ranging from simple MLPs to more complex CNNs with residual connections, using PyTorch. The main focus is to investigate the benefits of **residual connections** and **fine-tuning techniques** on model performance.
 
 ## **Training Pipeline and Infrastructure**
 
@@ -35,22 +34,17 @@ The ***train_model*** function handles:
 
 ### **Evaluation Function**
 
-The `evaluate` function provides:  Average loss, Accuracy, Precision (weighted across classes)  
-
-This ensures a **multi-metric evaluation** beyond simple accuracy, useful for imbalanced datasets.
+The `evaluate` function provides:  Average loss, Accuracy, Precision (weighted across classes). This ensures a **multi-metric evaluation** beyond simple accuracy, useful for imbalanced datasets.
 
 ## **Experiment Monitoring**
 
 WandB was used for: Real-time tracking of training and validation metrics; Visualization of loss/accuracy trends; Comparison between different model architectures.
 
----
-
 ## **Exercises**
 
 ### **Exercise 1:  MLP with Two Hidden Layers on MNIST**
 
-This first exercise introduces a baseline model for handwritten digit classification on the MNIST dataset: a Multilayer Perceptron (MLP) with **two hidden layers**.  
-The aim is to establish a solid reference point for later comparisons with deeper and more complex architectures, in line with the experimental spirit of the ResNet paper.
+This first exercise introduces a baseline model for handwritten digit classification on the MNIST dataset: a Multilayer Perceptron (MLP) with **two hidden layers**.  The aim is to establish a solid reference point for later comparisons with deeper and more complex architectures, in line with the experimental spirit of the ResNet paper.
 
 **Model Description**  
 The network consists of:  
@@ -86,15 +80,13 @@ Below are the metrics tracked with Weights & Biases (WandB):
 
 ### **Exercise 1.2  Adding Residual Connections to the MLP**
 
-In this exercise, the baseline MLP from *Exercise 1* was extended to include residual connections, following the principles introduced in the ResNet paper.  
-The goal was to investigate whether adding skip connections improves the trainability of deeper fully connected networks, both in terms of convergence speed and final accuracy.
+In this exercise, the baseline MLP from *Exercise 1* was extended to include residual connections, following the principles introduced in the ResNet paper.  The goal was to investigate whether adding skip connections improves the trainability of deeper fully connected networks, both in terms of convergence speed and final accuracy.
 
 **Model Description**  
 The model consists of:  
 Input Layer: Flattened 28×28 images (784 features)  
 First Fully Connected Layer: Projects the input to the hidden representation (110 neurons, ReLU activation)  
-Residual Blocks: Each block contains two linear layers with ReLU activations and dropout applied after the second layer. The block output is summed with its input (skip connection), followed by a ReLU activation. For this experiment, 2 residual blocks were stacked sequentially.  
-Output Layer: Fully connected layer mapping to the 10 digit classes.
+Residual Blocks: Each block contains two linear layers with ReLU activations and dropout applied after the second layer. The block output is summed with its input (skip connection), followed by a ReLU activation. For this experiment, 2 residual blocks were stacked sequentially,  Output Layer: Fully connected layer mapping to the 10 digit classes.
 
 Architecture:  
 `784 → FC(110) → [ResidualBlock × 2] → FC(10)`
@@ -110,8 +102,7 @@ Residual connections provided faster convergence (training stopped at epoch 11 v
 | ResidualMLP   | **11** | 0.0975    | 97.73%        | 97.75%                    |
 
 **Gradient Magnitude Analysis**  
-When comparing gradient norms on a single training batch, the ResidualMLP exhibited significantly larger gradient magnitudes in early layers, suggesting better gradient flow through the network.  
-This aligns with the ResNet claim that skip connections help mitigate vanishing gradients, making deeper networks easier to optimize.
+When comparing gradient norms on a single training batch, the ResidualMLP exhibited significantly larger gradient magnitudes in early layers, suggesting better gradient flow through the network.  This aligns with the ResNet claim that skip connections help mitigate vanishing gradients, making deeper networks easier to optimize.
 
 MLP (Gradient Norms)  
 fc1.weight: 0.1896  
@@ -141,14 +132,11 @@ fc2.weight: 0.4143
 ### **Exercise 1.3  CNN vs Residual CNN on CIFAR-10**
 
 In this exercise, the experiment from Exercise 1.2 was repeated, replacing the MLP with **Convolutional Neural Networks (CNNs)**.  
-The objective was to verify if deeper CNNs without residual connections necessarily yield better results, and whether residual connections improve trainability in deeper architectures.  
-CIFAR-10 was chosen as the dataset, as MNIST is too simple to show significant differences for this type of architecture.
+The objective was to verify if deeper CNNs without residual connections necessarily yield better results, and whether residual connections improve trainability in deeper architectures.  CIFAR-10 was chosen as the dataset, as MNIST is too simple to show significant differences for this type of architecture.
 
 **Model Description**  
 Two model variants were implemented: a Simple CNN and a Residual CNN.
-
 The Simple CNN applies successive convolutional layers with ReLU activation, doubling the number of channels at each step and applying max pooling every two layers. After feature extraction, a fully connected layer reduces the feature map to 128 neurons, followed by dropout and the final classification layer.
-
 The Residual CNN starts with a single convolution + batch normalization + ReLU block, followed by a configurable number of ResNet BasicBlocks (as in the original ResNet architecture), which implement skip connections over sequences of 3×3 convolutions.  
 After the residual stack, global average pooling reduces the spatial dimensions, followed by dropout and a final linear layer for classification.
 
@@ -193,14 +181,10 @@ The results confirm the exercise’s goal: deeper CNNs without residual connecti
 ### **Exercise 2.1  Fine-tuning a Pre-trained Residual CNN on CIFAR-100**
 
 In this exercise, the Residual CNN trained on CIFAR-10 in Exercise 1.3 was used as the starting point for experiments on the CIFAR-100 dataset.  
-The main goal was to compare the performance of feature extraction using the pre-trained model combined with classical classifiers, and full fine-tuning of the network on CIFAR-100.  
-The pre-trained model was loaded and all convolutional layers were frozen to prevent weight updates.
-
+The main goal was to compare the performance of feature extraction using the pre-trained model combined with classical classifiers, and full fine-tuning of the network on CIFAR-100.  The pre-trained model was loaded and all convolutional layers were frozen to prevent weight updates.
 A forward hook was registered on the last fully connected layer to extract feature vectors for each image. These extracted features were then used to train classical machine learning models: a **linear SVM** and a **K-Nearest Neighbors classifier (k=5)**.  
 This step established a stable baseline to evaluate the benefit of fine-tuning.
-
-For fine-tuning, the original 10-class classifier was replaced with a new, randomly initialized 100-class classifier.  
-The model was then trained on the CIFAR-100 training set using the Adam optimizer with a batch size of 128 and learning rate of 1e-3, under similar training conditions as in the previous CIFAR-10 experiment.  
+For fine-tuning, the original 10-class classifier was replaced with a new, randomly initialized 100-class classifier.  The model was then trained on the CIFAR-100 training set using the Adam optimizer with a batch size of 128 and learning rate of 1e-3, under similar training conditions as in the previous CIFAR-10 experiment.  
 
 Results show that the classical classifiers trained on frozen features **performed poorly on CIFAR-100**, indicating the **domain gap and limited discriminative power without adaptation**.  
 Fine-tuning improved performance significantly, reaching almost **40% accuracy**, demonstrating that updating the network weights allows a minimal adaptation to the more complex CIFAR-100 classification task.
