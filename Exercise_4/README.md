@@ -33,7 +33,7 @@ Subsequent experiments explored **targeted attacks**, analyzing how the model co
 
 ## **Exercise 1: OOD Detection and Performance Evaluation**
 
-### **Exercise 1.1 — Building a Simple OOD Detection Pipeline**
+### **Exercise 1.1  Building a Simple OOD Detection Pipeline**
 In this exercise, a simple OOD detection pipeline was implemented to evaluate how well a pre-trained Residual CNN could differentiate between in-distribution (ID) and out-of-distribution (OOD) samples. CIFAR-10 was used as the ID dataset, while a synthetic dataset generated via FakeData served as OOD samples. The method used **maximum softmax probability** as a confidence score to quantify how “in-distribution” a sample appeared to the model.
 
 The pipeline involved:
@@ -63,7 +63,7 @@ This qualitative visualization allowed us to see that ID samples generally produ
 
 ---
 
-## **Exercise 1.2 — Measuring OOD Detection Performance**
+## **Exercise 1.2  Measuring OOD Detection Performance**
 In this exercise, the Out-of-Distribution (OOD) detection pipeline was extended by introducing **quantitative performance evaluation metrics**. The primary focus was on threshold-free evaluation methods, which avoid depending on a single decision threshold. Specifically, two widely used metrics were computed:
 
 1. **Area Under the Receiver Operating Characteristic Curve (AUROC)** — measures the trade-off between the true positive rate and the false positive rate for OOD detection, considering all possible thresholds  
@@ -85,7 +85,7 @@ The **Maximum Softmax Probability (MSP)** scores obtained from the previous exer
 
 ---
 
-## **Exercise 2.1 — Implementing FGSM and Generating Adversarial Examples**
+## **Exercise 2.1  Implementing FGSM and Generating Adversarial Examples**
 The Fast Gradient Sign Method (FGSM) was implemented to generate adversarial examples starting from correctly classified images of the CIFAR-10 test set. The attack perturbs each input image in the direction of the gradient of the loss with respect to the input pixels, scaled by a perturbation magnitude parameter $\varepsilon$. This modification aims to push the model toward making incorrect predictions while keeping the perturbation imperceptible to the human eye.
 
 For this experiment, only the **untargeted attack** mode of the FGSM function was used — perturbations were crafted solely to increase the loss of the correct class, without forcing the model toward a specific alternative class.
@@ -96,7 +96,7 @@ For this experiment, only the **untargeted attack** mode of the FGSM function wa
 
 ---
 
-## **Exercise 2.2 — Augment Training with Adversarial Examples**
+## **Exercise 2.2  Augment Training with Adversarial Examples**
 In this part, the **FGSM** function (in *untargeted* mode) was used to generate adversarial examples ***on-the-fly*** during training, to increase the model’s robustness.  
 For each batch, the model was first trained on original images and then on perturbed versions of the same images.
 
@@ -132,7 +132,7 @@ For each batch, the model was first trained on original images and then on pertu
 
 ---
 
-## **Exercise 3.3 — Targeted Adversarial Attacks (FGSM)**
+## **Exercise 3.3  Targeted Adversarial Attacks (FGSM)**
 A **targeted** variant of FGSM was implemented to steer predictions toward a specific class on the non-improved model. Starting from correctly classified CIFAR-10 test images (misclassified samples were skipped), perturbations with $\varepsilon = 0.03$ were crafted. Both **single-image** success and **batch-level** behavior were evaluated. Although FGSM is a single-step method, a short iterative loop (up to 5 steps) was used to see how quickly the model could be pushed to the desired class.
 
 **Single-image attack (target = “horse”)** reached the target in **3 steps** with minimal visible change.  

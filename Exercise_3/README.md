@@ -24,7 +24,7 @@ In this lab, I followed a progressive approach:
 2. Use DistilBERT as a pure feature extractor to train a simple classifier.  
 3. Perform full fine-tuning of DistilBERT for sentiment analysis, comparing the results to the baseline.
 
-## **Exercise 1 — Sentiment Analysis**
+## **Exercise 1  Sentiment Analysis**
 
 I started by loading the dataset from HuggingFace and checking the train, validation, and test splits, along with the label distribution.  
 I also inspected a few sample sentences to get familiar with the text style and content.
@@ -41,7 +41,7 @@ Test accuracy = 0.8068
 
 *This confirmed that even without task-specific training, transformer embeddings contain meaningful semantic information for classification.*
 
-## **Exercise 2 — Fine-tuning DistilBERT**
+## **Exercise 2  Fine-tuning DistilBERT**
 
 After establishing the baseline, the model was fine-tuned for the sentiment classification task.  
 The tokenization step was applied to all splits with truncation and padding to a fixed length.  
@@ -75,7 +75,7 @@ The SVM baseline already showed strong performance thanks to the quality of Dist
 However, full fine-tuning of DistilBERT is expected to provide better results by adapting the model parameters directly to the Rotten Tomatoes dataset.  
 This experiment demonstrates the flexibility of the HuggingFace ecosystem to move from simple feature extraction to complete fine-tuning with minimal changes in workflow.
 
-## **Exercise 3.1 — Efficient Fine-tuning with PEFT (LoRA)**
+## **Exercise 3.1  Efficient Fine-tuning with PEFT (LoRA)**
 
 In this exercise, I explored ways to make fine-tuning DistilBERT more efficient for sentiment analysis on the Rotten Tomatoes dataset. In the previous exercise, I had fine-tuned the entire model, which proved to be quite expensive in terms of computation. Here, I focused on **parameter-efficient fine-tuning** using the HuggingFace **PEFT library**, specifically implementing **LoRA (Low-Rank Adaptation)**.
 

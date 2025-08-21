@@ -56,7 +56,7 @@ WandB was used for:
 
 ## **Exercises**
 
-### **Exercise 1 — MLP with Two Hidden Layers on MNIST**
+### **Exercise 1  MLP with Two Hidden Layers on MNIST**
 
 This first exercise introduces a baseline model for handwritten digit classification on the MNIST dataset: a Multilayer Perceptron (MLP) with **two hidden layers**.  
 The aim is to establish a solid reference point for later comparisons with deeper and more complex architectures, in line with the experimental spirit of the ResNet paper.
@@ -99,7 +99,7 @@ Below are the metrics tracked with Weights & Biases (WandB):
 
 ---
 
-### **Exercise 1.2 — Adding Residual Connections to the MLP**
+### **Exercise 1.2  Adding Residual Connections to the MLP**
 
 In this exercise, the baseline MLP from *Exercise 1* was extended to include residual connections, following the principles introduced in the ResNet paper.  
 The goal was to investigate whether adding skip connections improves the trainability of deeper fully connected networks, both in terms of convergence speed and final accuracy.
@@ -153,7 +153,7 @@ fc2.weight: 0.4143
 
 ---
 
-### **Exercise 1.3 — CNN vs Residual CNN on CIFAR-10**
+### **Exercise 1.3  CNN vs Residual CNN on CIFAR-10**
 
 In this exercise, the experiment from Exercise 1.2 was repeated, replacing the MLP with **Convolutional Neural Networks (CNNs)**.  
 The objective was to verify if deeper CNNs without residual connections necessarily yield better results, and whether residual connections improve trainability in deeper architectures.  
@@ -205,7 +205,7 @@ The results confirm the exercise’s goal: deeper CNNs without residual connecti
 
 ---
 
-### **Exercise 2.1 — Fine-tuning a Pre-trained Residual CNN on CIFAR-100**
+### **Exercise 2.1  Fine-tuning a Pre-trained Residual CNN on CIFAR-100**
 
 In this exercise, the Residual CNN trained on CIFAR-10 in Exercise 1.3 was used as the starting point for experiments on the CIFAR-100 dataset.  
 The main goal was to compare the performance of feature extraction using the pre-trained model combined with classical classifiers, and full fine-tuning of the network on CIFAR-100.  

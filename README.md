@@ -6,7 +6,7 @@ This repository collects a series of **deep learning laboratory exercises** cove
 
 ## **Laboratories Overview**
 
-### **Laboratory 1 — Neural Network Architectures and Residual Connections**
+### **Laboratory 1  Neural Network Architectures and Residual Connections**
 - **Objective:** Investigate the impact of residual connections in fully connected and convolutional neural networks.
 - **Key Features:**
   - Modular implementations of MLPs and CNNs with configurable residual blocks
@@ -18,7 +18,7 @@ This repository collects a series of **deep learning laboratory exercises** cove
 
 ---
 
-### **Laboratory 3 — Transformers in the HuggingFace Ecosystem**
+### **Laboratory 3  Transformers in the HuggingFace Ecosystem**
 - **Objective:** Adapt pre-trained transformers to a text classification task and explore HuggingFace workflows.
 - **Key Features:**
   - Feature extraction with **DistilBERT embeddings** for SVM baseline
@@ -30,7 +30,7 @@ This repository collects a series of **deep learning laboratory exercises** cove
 
 ---
 
-### **Laboratory 3 — Adversarial Learning**
+### **Laboratory 3  Adversarial Learning**
 - **Objective:** Study the vulnerability of neural networks to adversarial attacks and enhance model robustness.
 - **Key Features:**
   - Evaluation of **untargeted and targeted FGSM attacks**
